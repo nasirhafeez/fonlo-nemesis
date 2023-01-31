@@ -1,6 +1,7 @@
 <?php
 
 require 'header.php';
+include 'config.php';
 
 if (!isset($_SESSION['id'])) {
   $_SESSION["id"] = $_GET['id'];
@@ -12,43 +13,12 @@ $_SESSION["method"] = "sms";
 
 # Checking DB to see if user exists or not.
 
-$getData = [
-  "mac" => $_SESSION["id"],
-  "apmac" => $_SESSION["ap"],
-  "venue_id" => $venue_id
-];
+$result = mysqli_query($con, "SELECT * FROM `$table_name` WHERE mac='$_SESSION[id]'");
+mysqli_close($con);
 
-$curl = curl_init();
-
-curl_setopt_array($curl, array(
-  CURLOPT_URL => $api_url . "/" . $_SESSION["id"],
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => '',
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 0,
-  CURLOPT_SSL_VERIFYPEER => false,
-  CURLOPT_SSL_VERIFYHOST => false,
-  CURLOPT_FOLLOWLOCATION => true,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => 'GET',
-  CURLOPT_POSTFIELDS => json_encode($getData),
-  CURLOPT_HTTPHEADER => array(
-    'Content-Type: application/json'
-  ),
-));
-
-$response = curl_exec($curl);
-
-curl_close($curl);
-
-if ($response !== false) {
-  if ($response != "Does Not Exist") {
-    $_SESSION["user_type"] = "repeat";
-    header("Location: welcome.php");
-  }
-}
-else {
-  die("Error: check with your network administrator");
+if ($result->num_rows >= 1) {
+  $_SESSION['user_type'] = "repeat";
+  header("Location: welcome.php");
 }
 
 ?>
@@ -60,12 +30,12 @@ else {
   <title>
     <?php echo htmlspecialchars($business_name); ?> WiFi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <link rel="stylesheet" href="../assets/styles/bulma.min.css" />
-  <link rel="stylesheet" href="../vendor/fortawesome/font-awesome/css/all.css" />
-  <link rel="icon" type="image/png" href="../assets/images/favicomatic/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="../assets/images/favicomatic/favicon-16x16.png" sizes="16x16" />
-  <link rel="stylesheet" href="../assets/styles/main.css" />
-  <link rel="stylesheet" href="../assets/styles/style.css" />
+  <link rel="stylesheet" href="assets/styles/bulma.min.css" />
+  <link rel="stylesheet" href="vendor/fortawesome/font-awesome/css/all.css" />
+  <link rel="icon" type="image/png" href="assets/images/favicomatic/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="assets/images/favicomatic/favicon-16x16.png" sizes="16x16" />
+  <link rel="stylesheet" href="assets/styles/main.css" />
+  <link rel="stylesheet" href="assets/styles/style.css" />
 </head>
 
 <body>
@@ -74,7 +44,7 @@ else {
     <div class="head">
       <br>
       <figure id="logo">
-        <img src="../assets/images/logo.png">
+        <img src="assets/images/logo.png">
       </figure>
     </div>
 

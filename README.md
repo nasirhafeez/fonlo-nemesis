@@ -1,4 +1,4 @@
-# Ubiquiti External Captive Portal with SMS and Email Verification
+# Aruba Instant On Captive Portal with SMS and Email Verification
 
 The captive portal web server can be setup using the instructions given [here](https://gist.github.com/nasirhafeez/d47c9d68742227a23f1011455a190490). It uses Twilio Verify for for SMS verification and additionally uses Twilio SendGrid for email verification.
 
