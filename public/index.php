@@ -4,8 +4,8 @@ require 'header.php';
 include 'config.php';
 
 if (!isset($_SESSION['id'])) {
-  $_SESSION["id"] = $_GET['id'];
-  $_SESSION["ap"] = $_GET['ap'];
+  $_SESSION["id"] = $_GET['mac'];
+  $_SESSION["url"] = $_GET['post'];
 }
 
 $_SESSION["user_type"] = "new";
@@ -84,8 +84,8 @@ if ($result->num_rows >= 1) {
                 <p class="control">
             <span class="select">
               <select id="country_code" name="country_code">
-                <option value="+1">(CA) +1</option>
-                <option value="+1" selected>(US) +1</option>
+                <option value="+1" selected>(CA) +1</option>
+                <option value="+1">(US) +1</option>
                 <option value="+7">(KZ) +7</option>
                 <option value="+7">(RU) +7</option>
                 <option value="+20">(EG) +20</option>
