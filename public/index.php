@@ -36,23 +36,63 @@ if ($result->num_rows >= 1) {
   <link rel="icon" type="image/png" href="assets/images/favicomatic/favicon-16x16.png" sizes="16x16" />
   <link rel="stylesheet" href="assets/styles/main.css" />
   <link rel="stylesheet" href="assets/styles/style.css" />
+  <style>
+        body {
+      background-image: url('lg.jpeg'); /* fallback for large devices */
+      background-size: cover;
+    }
+
+    @media only screen and (max-width: 768px) {
+      body {
+        background-image: url('md.png'); /* used for medium and small devices */
+        background-size: cover;
+      }
+    }
+
+
+
+    .logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+}
+
+.logo img {
+  width: 30%;
+  height: auto;
+  max-width: 200px;
+}
+
+@media screen and (min-width: 768px) {
+  .logo img {
+    max-width: 200px;
+  }
+}
+  </style>
+  
 </head>
 
 <body>
+
+
+
+
+
   <div class="page">
 
-    <div class="head">
+  <div class="head">
       <br>
-      <figure id="logo">
+      <figure class="logo">
         <img src="assets/images/logo.png">
       </figure>
     </div>
 
     <div class="main">
-      <section class="section">
+      <section class="section" style="background-color: rgba(255, 255, 255, 0.4);border-radius:25px;">
         <div class="container">
           <div id="login" class="content is-size-5 has-text-centered has-text-weight-bold">Enter your details</div>
-          <form id="verify_sms" method="post" action="verify.php">
+          <form id="verify_sms" method="post" action="verify.php" >
             <div class="field">
                 <div class="control has-icons-left">
                     <input class="input" type="text" id="form_font" name="fname" placeholder="First Name" required>
@@ -71,7 +111,7 @@ if ($result->num_rows >= 1) {
               </div>
             </div>
 
-            <div class="field">
+            <div class="field" id="email-input">
                 <div class="control has-icons-left">
                     <input class="input" type="email" id="form_font" name="email" placeholder="Email" required>
                     <span class="icon is-small is-left">
@@ -80,7 +120,7 @@ if ($result->num_rows >= 1) {
                 </div>
             </div>
 
-            <div class="field has-addons">
+            <div class="field has-addons" id="sms-input">
                 <p class="control">
             <span class="select">
               <select id="country_code" name="country_code">
@@ -371,15 +411,19 @@ if ($result->num_rows >= 1) {
     const sms_tab = document.getElementById('tab_sms');
     const email_tab = document.getElementById('tab_email');
     const tab_value = document.getElementById('tab_val');
-
+    document.getElementById("email-input").style.display = "none";
     sms_tab.onclick = function() {
         email_tab.classList.remove('is-active');
+        document.getElementById("sms-input").style.display = "block";
+			  document.getElementById("email-input").style.display = "none";
         sms_tab.classList.add('is-active');
         tab_value.value = 'sms'
     }
 
     email_tab.onclick = function() {
         email_tab.classList.add('is-active');
+        document.getElementById("email-input").style.display = "block";
+			  document.getElementById("sms-input").style.display = "none";
         sms_tab.classList.remove('is-active');
         tab_value.value = 'email'
     }
