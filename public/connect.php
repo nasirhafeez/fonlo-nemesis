@@ -14,6 +14,7 @@ $phone = $_SESSION['phone'];
 $email = $_SESSION['email'];
 $last_updated = date("Y-m-d H:i:s");
 
+
 mysqli_query($con, "
 CREATE TABLE IF NOT EXISTS `$table_name` (
     `id` int(11) NOT NULL AUTO_INCREMENT,

@@ -8,6 +8,7 @@ if ($_SESSION['result'] == true) {
     $redirect_url = 'connect.php';
 }
 
+
 ?>
 <!DOCTYPE HTML>
 <html>

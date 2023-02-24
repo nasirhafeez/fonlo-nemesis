@@ -8,6 +8,7 @@ if (!isset($_SESSION['id'])) {
   $_SESSION["url"] = $_GET['post'];
 }
 
+
 $_SESSION["user_type"] = "new";
 $_SESSION["method"] = "sms";
 
