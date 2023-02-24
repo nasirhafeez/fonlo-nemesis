@@ -17,8 +17,8 @@ $last_updated = date("Y-m-d H:i:s");
 mysqli_query($con, "
 CREATE TABLE IF NOT EXISTS `$table_name` (
     `id` int(11) NOT NULL AUTO_INCREMENT,
-    `phone` varchar(16) NOT NULL,
-    `email` varchar(45) NOT NULL,
+    `phone` varchar(16),
+    `email` varchar(45),
     `first_name` varchar(100) NOT NULL,
     `last_name` varchar(100) NOT NULL,
     `mac` varchar(17) NOT NULL,

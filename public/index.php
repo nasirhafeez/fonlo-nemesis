@@ -113,7 +113,7 @@ if ($result->num_rows >= 1) {
 
             <div class="field" id="email-input">
                 <div class="control has-icons-left">
-                    <input class="input" type="email" id="form_font" name="email" placeholder="Email" required>
+                    <input class="input" type="email" id="form_font" name="email" placeholder="Email">
                     <span class="icon is-small is-left">
                         <i class="fas fa-envelope"></i>
                     </span>
@@ -368,7 +368,7 @@ if ($result->num_rows >= 1) {
             </span>
                 </p>
                 <p class="control">
-                    <input class="input" type="tel" id="phone_number" name="phone_number" placeholder="Phone Number" pattern="[0-9]{10}" required>
+                    <input class="input" type="tel" id="phone_number" name="phone_number" placeholder="Phone Number" pattern="[0-9]{10}">
                 </p>
             </div>
             <div id="login" class="content is-size-5 has-text-centered has-text-weight-bold">Receive verification code via:</div>
