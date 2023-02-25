@@ -70,8 +70,8 @@ require 'header.php';
     </div>
 
     <div class="main">
-      <section class="section" style="background-color: rgba(255, 255, 255, 0.4);border-radius:25px;">
-            <div class="container">
+      <section class="section" style="background-color: white;border-radius:25px;">
+            <div class="container" style="text:white;">
                 <div id="margin_zero" class="content has-text-centered is-size-6">Welcome!</div>
                 <div id="margin_zero" class="content has-text-centered is-size-6">You'll be automatically authorized
                 </div>
