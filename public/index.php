@@ -27,102 +27,101 @@ if ($result->num_rows >= 1) {
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <title>
-    <?php echo htmlspecialchars($business_name); ?> WiFi</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <link rel="stylesheet" href="assets/styles/bulma.min.css" />
-  <link rel="stylesheet" href="vendor/fortawesome/font-awesome/css/all.css" />
-  <link rel="icon" type="image/png" href="assets/images/favicomatic/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="assets/images/favicomatic/favicon-16x16.png" sizes="16x16" />
-  <link rel="stylesheet" href="assets/styles/main.css" />
-  <link rel="stylesheet" href="assets/styles/style.css" />
-  <style>
+    <meta charset="utf-8">
+    <title>
+      <?php echo htmlspecialchars($business_name); ?> WiFi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="assets/styles/bulma.min.css"/>
+    <link rel="stylesheet" href="vendor/fortawesome/font-awesome/css/all.css"/>
+    <link rel="icon" type="image/png" href="assets/images/favicomatic/favicon-32x32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="assets/images/favicomatic/favicon-16x16.png" sizes="16x16"/>
+    <link rel="stylesheet" href="assets/styles/main.css"/>
+    <link rel="stylesheet" href="assets/styles/style.css"/>
+    <style>
         body {
-      background-image: url('lg.jpeg'); /* fallback for large devices */
-      background-size: cover;
-    }
+            background-image: url('lg.jpeg'); /* fallback for large devices */
+            background-size: cover;
+        }
 
-    @media only screen and (max-width: 768px) {
-      body {
-        background-image: url('md.png'); /* used for medium and small devices */
-        background-size: cover;
-      }
-    }
+        @media only screen and (max-width: 768px) {
+            body {
+                background-image: url('md.png'); /* used for medium and small devices */
+                background-size: cover;
+            }
+        }
 
 
+        .logo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px;
+        }
 
-    .logo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 10px;
-}
+        .logo img {
+            width: 30%;
+            height: auto;
+            max-width: 200px;
+        }
 
-.logo img {
-  width: 30%;
-  height: auto;
-  max-width: 200px;
-}
+        @media screen and (min-width: 768px) {
+            .logo img {
+                max-width: 200px;
+            }
+        }
+    </style>
 
-@media screen and (min-width: 768px) {
-  .logo img {
-    max-width: 200px;
-  }
-}
-  </style>
-  
 </head>
 
 <body>
 
 
+<div class="page">
 
-
-
-  <div class="page">
-
-  <div class="head">
-      <br>
-      <figure class="logo">
-        <img src="assets/images/logo.png">
-      </figure>
+    <div class="head">
+        <br>
+        <figure class="logo">
+            <img src="assets/images/logo.png">
+        </figure>
     </div>
 
     <div class="main">
-      <section class="section" style="background-color: rgba(255, 255, 255, 0.4);border-radius:25px;">
-        <div class="container">
-          <div id="login" class="content is-size-5 has-text-centered has-text-weight-bold">Enter your details</div>
-          <form id="verify_sms" method="post" action="verify.php" >
-            <div class="field">
-                <div class="control has-icons-left">
-                    <input class="input" type="text" id="form_font" name="fname" placeholder="First Name" required>
-                    <span class="icon is-small is-left">
+        <section class="section" style="background-color: rgba(255, 255, 255, 0.4);border-radius:25px;">
+            <div class="container">
+                <div id="login" class="content is-size-5 has-text-centered has-text-weight-bold">Enter your details
+                </div>
+                <form id="verify_sms" method="post" action="verify.php">
+                    <div class="field">
+                        <div class="control has-icons-left">
+                            <input class="input" type="text" id="form_font" name="fname" placeholder="First Name"
+                                   required>
+                            <span class="icon is-small is-left">
                         <i class="fas fa-user"></i>
                     </span>
-                </div>
-            </div>
+                        </div>
+                    </div>
 
-            <div class="field">
-              <div class="control has-icons-left">
-                  <input class="input" type="text" id="form_font" name="lname" placeholder="Last Name" required>
-                  <span class="icon is-small is-left">
+                    <div class="field">
+                        <div class="control has-icons-left">
+                            <input class="input" type="text" id="form_font" name="lname" placeholder="Last Name"
+                                   required>
+                            <span class="icon is-small is-left">
                     <i class="fas fa-user"></i>
                 </span>
-              </div>
-            </div>
+                        </div>
+                    </div>
 
-            <div class="field" id="email-input">
-                <div class="control has-icons-left">
-                    <input class="input" type="email" id="form_font" name="email" placeholder="Email">
-                    <span class="icon is-small is-left">
+                    <div class="field" id="email-input">
+                        <div class="control has-icons-left">
+                            <input class="input" type="email" id="form_font" name="email" placeholder="Email">
+                            <span class="icon is-small is-left">
                         <i class="fas fa-envelope"></i>
                     </span>
-                </div>
-            </div>
+                        </div>
+                    </div>
 
-            <div class="field has-addons" id="sms-input">
-                <p class="control">
+                    <div class="field has-addons" id="sms-input">
+                        <p class="control">
             <span class="select">
               <select id="country_code" name="country_code">
                 <option value="+1" selected>(CA) +1</option>
@@ -367,68 +366,72 @@ if ($result->num_rows >= 1) {
                 <option value="+44-1624">(IM) +44-1624</option>
               </select>
             </span>
-                </p>
-                <p class="control">
-                    <input class="input" type="tel" id="phone_number" name="phone_number" placeholder="Phone Number" pattern="[0-9]{10}">
-                </p>
+                        </p>
+                        <p class="control">
+                            <input class="input" type="tel" id="phone_number" name="phone_number"
+                                   placeholder="Phone Number" pattern="[0-9]{10}">
+                        </p>
+                    </div>
+                    <div id="login" class="content is-size-5 has-text-centered has-text-weight-bold">Receive
+                        verification code via:
+                    </div>
+                    <div class="tabs is-centered is-toggle is-toggle-rounded">
+                        <ul>
+                            <li class="is-active" id="tab_sms">
+                                <a>
+                                    <span class="icon is-small"><i class="fas fa-mobile" aria-hidden="true"></i></span>
+                                    <span>SMS</span>
+                                </a>
+                            </li>
+                            <li id="tab_email">
+                                <a>
+                                    <span class="icon is-small"><i class="fas fa-envelope"
+                                                                   aria-hidden="true"></i></span>
+                                    <span>Email</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="columns is-centered is-mobile">
+                        <div class="control">
+                            <label class="checkbox">
+                                <input type="checkbox" required>
+                                I agree to the <a href="policy.php">Terms of Use</a>
+                            </label>
+                        </div>
+                    </div>
+                    <input class="input" id="tab_val" name="tab_val" type="hidden" value="sms">
+                    <div class="buttons is-centered">
+                        <button class="button is-dark">Connect</button>
+                    </div>
+                </form>
             </div>
-            <div id="login" class="content is-size-5 has-text-centered has-text-weight-bold">Receive verification code via:</div>
-            <div class="tabs is-centered is-toggle is-toggle-rounded">
-              <ul>
-                  <li class="is-active" id="tab_sms">
-                      <a>
-                          <span class="icon is-small"><i class="fas fa-mobile" aria-hidden="true"></i></span>
-                          <span>SMS</span>
-                      </a>
-                  </li>
-                  <li id="tab_email">
-                      <a>
-                          <span class="icon is-small"><i class="fas fa-envelope" aria-hidden="true"></i></span>
-                          <span>Email</span>
-                      </a>
-                  </li>
-              </ul>
-            </div>
-            <div class="columns is-centered is-mobile">
-                <div class="control">
-                    <label class="checkbox">
-                        <input type="checkbox" required>
-                        I agree to the <a href="policy.php">Terms of Use</a>
-                    </label>
-                </div>
-            </div>
-            <input class="input" id="tab_val" name="tab_val" type="hidden" value="sms">
-            <div class="buttons is-centered">
-                <button class="button is-dark">Connect</button>
-            </div>
-          </form>
-        </div>
-        <br>
-      </section>
+            <br>
+        </section>
     </div>
-  </div>
+</div>
 
 <script>
     const sms_tab = document.getElementById('tab_sms');
     const email_tab = document.getElementById('tab_email');
     const tab_value = document.getElementById('tab_val');
     document.getElementById("email-input").style.display = "none";
-    sms_tab.onclick = function() {
+    sms_tab.onclick = function () {
         email_tab.classList.remove('is-active');
         document.getElementById("sms-input").style.display = "block";
-			  document.getElementById("email-input").style.display = "none";
+        document.getElementById("email-input").style.display = "none";
         sms_tab.classList.add('is-active');
         tab_value.value = 'sms'
     }
 
-    email_tab.onclick = function() {
+    email_tab.onclick = function () {
         email_tab.classList.add('is-active');
         document.getElementById("email-input").style.display = "block";
-			  document.getElementById("sms-input").style.display = "none";
+        document.getElementById("sms-input").style.display = "none";
         sms_tab.classList.remove('is-active');
         tab_value.value = 'email'
     }
-  
+
     // Phone number validation
 
     const input = document.querySelector('input[name="phone_number"]');
