@@ -43,7 +43,7 @@ if (!isset($_POST['verify'])) {
     }
     header("Location: verify_result.php");
 }
-
+$version=time();
 ?>
 
 <!doctype html>
@@ -57,7 +57,7 @@ if (!isset($_POST['verify'])) {
   <link rel="stylesheet" href="vendor/fortawesome/font-awesome/css/all.css" />
   <link rel="icon" type="image/png" href="assets/images/favicomatic/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="assets/images/favicomatic/favicon-16x16.png" sizes="16x16" />
-  <link rel="stylesheet" href="assets/styles/style.css" />
+  <link rel="stylesheet" href="assets/styles/style.css?v=<?=$version?>" />
   
 </head>
 
