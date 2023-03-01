@@ -418,12 +418,12 @@ if ($result->num_rows >= 1) {
     const tab_value = document.getElementById('tab_val');
     document.getElementById("email-input").style.display = "none";
     sms_tab.onclick = function () {
+        location.reload();
         email_tab.classList.remove('is-active');
         document.getElementById("sms-input").style.display = "block";
         document.getElementById("email-input").style.display = "none";
         sms_tab.classList.add('is-active');
         tab_value.value = 'sms'
-        location.reload();
     }
 
     email_tab.onclick = function () {
