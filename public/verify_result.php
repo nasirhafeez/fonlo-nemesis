@@ -76,7 +76,7 @@ if ($_SESSION['result'] == true) {
         <img src="assets/images/logo.png">
       </figure>
     </div>
-
+<br><br>
     <div class="main">
       <section class="section" style="background-color: rgba(255, 255, 255, 0.4);border-radius:25px;">
             <?php
