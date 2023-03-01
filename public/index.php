@@ -37,40 +37,7 @@ if ($result->num_rows >= 1) {
     <link rel="icon" type="image/png" href="assets/images/favicomatic/favicon-16x16.png" sizes="16x16"/>
     <link rel="stylesheet" href="assets/styles/main.css"/>
     <link rel="stylesheet" href="assets/styles/style.css"/>
-    <style>
-        body {
-            background-image: url('lg.jpeg'); /* fallback for large devices */
-            background-size: cover;
-        }
-
-        @media only screen and (max-width: 768px) {
-            body {
-                background-image: url('md.png'); /* used for medium and small devices */
-                background-size: cover;
-            }
-        }
-
-
-        .logo {
-            position: absolute;
-            top: 0;
-            left: 0;
-            padding: 10px;
-        }
-
-        .logo img {
-            width: 30%;
-            height: auto;
-            max-width: 200px;
-        }
-
-        @media screen and (min-width: 768px) {
-            .logo img {
-                max-width: 200px;
-            }
-        }
-    </style>
-
+    
 </head>
 
 <body>
