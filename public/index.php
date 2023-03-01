@@ -423,6 +423,7 @@ if ($result->num_rows >= 1) {
         document.getElementById("email-input").style.display = "none";
         sms_tab.classList.add('is-active');
         tab_value.value = 'sms'
+        location.reload();
     }
 
     email_tab.onclick = function () {
