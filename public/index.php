@@ -84,9 +84,9 @@ if ($result->num_rows >= 1) {
             <img src="assets/images/logo.png">
         </figure>
     </div>
-    <br><br>
+<br><br>
     <div class="main">
-        <section class="section" style="background-color: rgba(255, 255, 255, 0.4);border-radius:25px;">
+        <section class="section" style="background-color: rgba(255, 255, 255, 0.4);border-radius:25px;color:white;">
             <div class="container">
                 <div id="login" class="content is-size-5 has-text-centered has-text-weight-bold">Enter your details
                 </div>
@@ -124,7 +124,8 @@ if ($result->num_rows >= 1) {
                         <p class="control">
             <span class="select">
               <select id="country_code" name="country_code">
-                <option value="+1" selected>(CA) +1</option>
+              <option value="" selected>Select</option>
+                <option value="+1" >(CA) +1</option>
                 <option value="+1">(US) +1</option>
                 <option value="+7">(KZ) +7</option>
                 <option value="+7">(RU) +7</option>
