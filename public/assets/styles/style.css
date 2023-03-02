@@ -10,7 +10,6 @@ body {
   }
 }
 
-
 .logo {
   position: absolute;
   top: 0;
@@ -29,10 +28,6 @@ body {
       max-width: 200px;
   }
 }
-
-
-
-
 
 /*
     *{ border: 1px solid red; }
@@ -97,10 +92,9 @@ body {
 
 a
 {
-  color: black;
+  color: white;
   text-decoration: underline;
 }
-
 
 /* Media Query for Desktops */
 
@@ -127,8 +121,6 @@ and (min-width: 768px)
   }
 
 }
-
-
 
 /* Media Query for iPads */
 
