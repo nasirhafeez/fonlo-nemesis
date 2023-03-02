@@ -383,7 +383,9 @@ $version = time();
     const tab_value = document.getElementById('tab_val');
     document.getElementById("email-input").style.display = "none";
     sms_tab.onclick = function () {
-        location.reload();
+        setTimeout(() => {
+  document.location.reload();
+}, 1);
         email_tab.classList.remove('is-active');
         document.getElementById("sms-input").style.display = "block";
         document.getElementById("email-input").style.display = "none";
