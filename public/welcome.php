@@ -36,7 +36,7 @@ $version=time();
     </div>
 
     <div class="main">
-      <section class="section" style="background-color: white;border-radius:25px;">
+      <section class="section bg_col">
             <div class="container" style="text:white;">
                 <div id="margin_zero" class="content has-text-centered is-size-6">Welcome!</div>
                 <div id="margin_zero" class="content has-text-centered is-size-6">You'll be automatically authorized

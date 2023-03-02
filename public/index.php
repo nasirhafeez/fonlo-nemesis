@@ -51,7 +51,7 @@ $version = time();
     </div>
     <br><br>
     <div class="main">
-        <section class="section" style="background-color: rgba(255, 255, 255, 0.4);border-radius:25px;color:white;">
+        <section class="section bg_col">
             <div class="container">
                 <div id="login" class="content is-size-5 has-text-centered has-text-weight-bold">Enter your details
                 </div>

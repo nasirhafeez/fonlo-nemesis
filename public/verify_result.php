@@ -44,7 +44,7 @@ $version=time();
     </div>
 <br><br>
     <div class="main">
-      <section class="section" style="background-color: rgba(255, 255, 255, 0.4);border-radius:25px;">
+      <section class="section bg_col">
             <?php
             if ($_SESSION['result'] == true) {
             ?>
