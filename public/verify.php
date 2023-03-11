@@ -14,7 +14,13 @@ $twilio = new Client($sid, $token);
 if (!isset($_POST['verify'])) {
     $_SESSION['fname'] = $_POST['fname'];
     $_SESSION['lname'] = $_POST['lname'];
-    $phone = $_POST['country_code'] . $_POST['phone_number'];
+    if($_POST['phone_number']=="")
+    {
+      $phone = $_POST['phone_number'];
+    }
+    else{
+      $phone = $_POST['country_code'] . $_POST['phone_number'];
+    }
     $_SESSION['phone'] = trim($phone);
     $_SESSION['email'] = $_POST['email'];
     $_SESSION['method'] = $_POST['tab_val'];

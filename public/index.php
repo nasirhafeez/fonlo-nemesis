@@ -89,8 +89,7 @@ $version = time();
                         <p class="control">
                         <span class="select">
                           <select id="country_code" name="country_code">
-                          <option value="" selected>Select</option>
-                            <option value="+1">(CA) +1</option>
+                            <option value="+1"selected>(CA) +1</option>
                             <option value="+1">(US) +1</option>
                             <option value="+7">(KZ) +7</option>
                             <option value="+7">(RU) +7</option>
