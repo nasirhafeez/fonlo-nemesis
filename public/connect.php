@@ -69,7 +69,7 @@ $version=time();
     <div class="main">
         <section class="section bg_col">
            <div id="margin_zero" class="content has-text-centered is-size-6">Thanks, you are now </div>
-           <div id="margin_zero" class="content has-text-centered is-size-6">authorized on WiFi</div>
+           <div id="margin_zero" class="content has-text-centered is-size-6">authorized on the network</div>
        </seection>
     </div>
 
