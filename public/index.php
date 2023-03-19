@@ -334,16 +334,16 @@ $version = time();
             <div id="login" class="content is-size-5 has-text-centered has-text-weight-bold">Receive verification code via:</div>
             <div class="tabs is-centered is-toggle is-toggle-rounded">
               <ul>
-                  <li  id="tab_sms">
-                      <a>
-                          <span class="icon is-small"><i class="fas fa-mobile" aria-hidden="true"></i></span>
-                          <span>SMS</span>
-                      </a>
-                  </li>
                   <li id="tab_email" class="is-active">
                       <a>
                           <span class="icon is-small"><i class="fas fa-envelope" aria-hidden="true"></i></span>
                           <span>Email</span>
+                      </a>
+                  </li>
+                  <li  id="tab_sms">
+                      <a>
+                          <span class="icon is-small"><i class="fas fa-mobile" aria-hidden="true"></i></span>
+                          <span>SMS</span>
                       </a>
                   </li>
               </ul>
