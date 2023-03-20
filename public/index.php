@@ -52,7 +52,7 @@ $version = time();
       <section class="section" style="background-color: rgba(255, 255, 255, 0.4);border-radius:25px;">
         <div class="container">
           <div id="login" class="content is-size-5 has-text-centered has-text-weight-bold">Enter your details</div>
-          <form id="verify_sms" method="post" action="" >
+          <form id="verify_sms" method="post" action="verify.php" >
             <div class="field">
                 <div class="control has-icons-left">
                     <input class="input" type="text" id="form_font" name="fname" placeholder="First Name" required>
