@@ -76,8 +76,8 @@ $version=time();
 </div>
 
 <form id="form1" name="form1" method=POST action="https://<?php echo htmlspecialchars($url); ?>/cgi-bin/login">
-    <input name=user value="user1" type="hidden">
-    <input name=password value="pass1" type="hidden">
+    <input name=user value="<?php echo htmlspecialchars($mac); ?>" type="hidden">
+    <input name=password value="<?php echo htmlspecialchars($mac); ?>" type="hidden">
     <input name=cmd value="authenticate" type="hidden">
     <input name=session_timeout value="3600" type="hidden">
 </form>
