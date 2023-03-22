@@ -47,7 +47,7 @@ $version=time();
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="assets/styles/bulma.min.css" />
     <link rel="stylesheet" href="vendor/fortawesome/font-awesome/css/all.css" />
-    <meta http-equiv="refresh" content="5;url=<?php echo htmlspecialchars($redirect_url); ?>" />
+    <meta http-equiv="refresh" content="2;url=<?php echo htmlspecialchars($redirect_url); ?>" />
     <link rel="icon" type="image/png" href="assets/images/favicomatic/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="assets/images/favicomatic/favicon-16x16.png" sizes="16x16" />
     <link rel="stylesheet" href="assets/styles/style.css?v=<?=$version?>" />
@@ -79,7 +79,7 @@ $version=time();
     <input name=user value="<?php echo htmlspecialchars($mac); ?>" type="hidden">
     <input name=password value="<?php echo htmlspecialchars($mac); ?>" type="hidden">
     <input name=cmd value="authenticate" type="hidden">
-    <input name=session_timeout value="3600" type="hidden">
+    <input name=session_timeout value="60" type="hidden">
 </form>
 
 <script type="text/javascript">
