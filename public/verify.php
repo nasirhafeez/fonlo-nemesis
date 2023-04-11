@@ -95,7 +95,7 @@ $version=time();
             <input class="button is-dark" type="submit" name="verify" value="Verify">
           </div>
         </form>
-      </seection>
+      </section>
     </div>
 
   </div>
