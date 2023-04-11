@@ -29,11 +29,9 @@ if (!isset($_POST['verify'])) {
         $_SESSION['address'] = $_SESSION['email'];
     }
 
-    echo $_SESSION['address'] . $_SESSION['method'];
-
-//    $verification = $twilio->verify->v2->services($serviceid)
-//        ->verifications
-//        ->create($_SESSION['address'], $_SESSION['method']);
+    $verification = $twilio->verify->v2->services($serviceid)
+        ->verifications
+        ->create($_SESSION['address'], $_SESSION['method']);
 } else {
     $_SESSION['code'] = trim($_POST['code']);
     $_SESSION['result'] = false;
