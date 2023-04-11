@@ -355,7 +355,7 @@ $version = time();
                     </label>
                 </div>
             </div>
-            <input class="input" id="tab_val" name="tab_val" type="hidden" value="sms">
+            <input class="input" id="tab_val" name="tab_val" type="hidden" value="email">
             <div class="buttons is-centered">
                 <button class="button is-dark" name="submit">Connect</button>
             </div>
