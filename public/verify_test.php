@@ -15,4 +15,4 @@ $_SESSION['method'] = "email";
 
 $verification = $twilio->verify->v2->services($serviceid)
   ->verifications
-  ->create($_SESSION['address'], $_SESSION['method']);
+  ->create($_SESSION['email'], $_SESSION['method']);
