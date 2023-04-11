@@ -29,7 +29,7 @@ if (!isset($_POST['verify'])) {
         $_SESSION['address'] = $_SESSION['email'];
     }
 
-    error_log($_SESSION['address'] . " " . $_SESSION['method']);
+    error_log($_SESSION['address'] . ", " . $_SESSION['method']);
 
     $verification = $twilio->verify->v2->services($serviceid)
         ->verifications
